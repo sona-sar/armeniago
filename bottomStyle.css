@@ -1,0 +1,170 @@
+.explore{
+    text-align: center;
+    font-size:40px;
+    font-weight:500;
+}
+
+.places-choose{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    margin:20px;
+    flex-wrap: wrap;
+    margin-bottom:50px;
+}
+.places-choose>button{
+    border-radius:100px;
+    padding:10px 20px;
+    cursor:pointer;
+    border:none;
+    background-color: rgb(241, 241, 241);
+
+}
+.places-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+}
+
+.places-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s linear;
+}
+.places-choose>button:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+
+.places-container>div{
+    display:grid;
+    column-gap:16px;
+    row-gap:40px;
+    grid-template-columns:1fr 1fr 1fr;
+    margin-bottom:50px;
+    margin-left:20px;
+    margin-right: 20px;
+}
+.places-container>div>div{
+    margin-left:20px;
+    margin-right:20px;
+    object-fit: contain;
+    position:relative;
+}
+.places-container>div>div>img{
+    width:100%;
+    cursor:pointer;
+    position:relative;
+    z-index:1;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.places-container>div>div>h3{
+    position:absolute;
+    bottom:0px; 
+    font-size:18px;
+    left:5px;
+    font-weight:500;
+    padding:10px 15px;
+    background-color:rgba(0, 0, 0, 0.4);
+    color:white;
+    border-radius:100px;
+    cursor: pointer;
+    transition:0.2s;
+    z-index: 3;
+}
+.places-container>div>div>h5>i{
+    position:absolute;
+    bottom:20px;
+    right:25px;
+    z-index:5;
+    color:white;
+    font-size:25px;
+    transition:0.2s;
+    cursor:pointer;
+}
+.places-container>div>div>p{
+    color:transparent;
+    background-color: transparent;
+    transition: 0.3s;
+    position:absolute;
+    bottom:0px;
+    font-size:15px;
+    z-index: 0;
+}
+.places-container>div>div:hover >p{
+    color:black;
+    bottom:-45px;
+}
+.places-container>div>div>img:hover{
+    filter:drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.397));
+}
+
+.fa-location-dot{
+    font-size:15px;
+    margin-left:5px;
+}
+
+.like-heart{
+    color:white;
+    z-index:30;
+    font-size:30px;
+    top:20px;
+    cursor: pointer;
+    right:22px;
+    position:absolute;
+    transition:0.15s;
+}
+.like-heart:hover{
+    box-shadow: none;
+    background:transparent;
+}
+
+
+@media (max-width: 1050px) {
+    .places-container>div{
+        grid-template-columns:1fr 1fr;
+    }
+}
+@media (min-width: 801px) and (max-width:1199px){
+    .places-container>div{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+@media (min-width: 1200px) {
+    .places-container>div{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+}
+
+
+
+@media (max-width: 1400px) {
+    .places-container>div>div>h3{
+        font-size:15px;
+    }
+    .places-container>div>div>h5>i{
+        font-size:23px;
+    }
+}
+@media (max-width: 1300px) {
+    .like-heart{
+        font-size:25px;
+    }
+}
+@media (max-width: 1199px) {
+    .places-container>div>div>h3{
+        font-size:18px;
+    }
+    .like-heart{
+        font-size:30px;
+    }
+}
+@media (max-width: 900px) {
+    .places-container>div>div>h3{
+        font-size:14px;
+    }
+}
+

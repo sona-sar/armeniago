@@ -1,0 +1,81 @@
+.info-us-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #02ADB5;
+    gap:20px;
+    padding-top:50px;
+    padding-bottom:40px;
+}
+.info-us-container>div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us>p, .about-us>h3, .contact-us>p, .contact-us>h3{
+    margin:0px;
+}
+
+.about-us>p, .contact-us>p{
+    color:#ecfeff;
+    font-weight: 400;
+    margin-top:15px;
+    margin-bottom:13px;
+}
+.about-us>h3, .contact-us>h3{
+    font-weight: 600;
+    color:white;
+    font-size:33px;
+    cursor: pointer;
+    transition: 0.2s;
+    position:relative;
+}
+
+.contact-us>p{
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.contact-us>p:hover{
+    color:#004d51;
+}
+
+.info-us-container>div>h3::before{
+    content: '';
+    position:absolute;
+    width:0%;
+    left:0;
+    bottom:-5px;
+    height: 2px;
+    background:white;
+    transition: all .3s;
+}
+
+.info-us-container>div>h3:hover::before{
+    width:100%;
+}
+
+.about-us>p{
+    width:70%;
+}
+.contact-us>div{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.contact-us>div>i{
+    color:#ecfeff;
+    font-size: 25px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.contact-us>div>i:hover{
+    box-shadow: none;
+    background-color: none;
+    transform: scale(1);
+    color:#004d51;
+}
