@@ -113,11 +113,6 @@ body {
     color:#00ADB5;
     transform:scale(1);
 }
-.fa-bars{
-    display:none;
-    transition:0.2s;
-}
-
 
 .dropdown-content{
     display: flex;
@@ -232,15 +227,30 @@ body {
     background-color: #dcdcdc !important; 
 }
 
+#menu{
+    display: none;
+}
+.fa-bars{
+    color:white;
+    padding:0px;
+    font-size:30px;
+    margin:0px;
+    margin-top:1px;
+    list-style: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.fa-bars:hover{
+    box-shadow:none;
+    color:#00ADB5;
+    transform:scale(1);
+}
+
 button {
     outline: none !important;
 }
 
-@media (max-width:1050px){
-     .fa-bars{
-        display:block;
-    }
-}
+
 @media (max-width: 1100px) {
     .text-carousel {
       font-size:38px;
@@ -251,6 +261,9 @@ button {
     .input-container {
         width:480px;
         transform:scale(0.9);
+    }
+    #menu{
+        display:block;
     }
 }
 
