@@ -31,7 +31,8 @@
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     overflow: hidden;
-    padding: 20px;
+    padding: 30px;
+    max-height:80% !important;
     box-shadow: 0 0px 8px rgba(0,0,0,0.15); 
     position: relative; 
     display: flex;
@@ -43,12 +44,11 @@
 
 .close-btn {
     position: absolute;
-    top: 35px;
+    top: 25px;
     right: 40px;
     cursor: pointer;
-    color: white; 
+    color: black; 
     font-size: 35px;
-    z-index: 10000;
 }
 
 .close-btn:hover{
@@ -71,7 +71,6 @@
     text-align: center;
     margin-top: 20px; 
     margin-bottom: 0px;
-    cursor: pointer;
     transition: 0.2s;
 }
 .detail-name:hover{
